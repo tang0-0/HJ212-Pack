@@ -1,3 +1,0 @@
-"C:\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\hj212.dir/objects.a
-C:\mingw64\bin\ar.exe cr CMakeFiles\hj212.dir/objects.a @CMakeFiles\hj212.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\hj212.dir/objects.a -Wl,--no-whole-archive  -o hj212.exe -Wl,--out-implib,libhj212.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\hj212.dir\linklibs.rsp
