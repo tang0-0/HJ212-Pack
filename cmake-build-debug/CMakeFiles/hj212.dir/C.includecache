@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Work/git/hj212/src/hj212.h
+
+D:/Work/git/hj212/src/main.c
+stdio.h
+-
+string.h
+-
+hj212.h
+D:/Work/git/hj212/src/hj212.h
+
