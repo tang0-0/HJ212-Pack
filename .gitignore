@@ -1,5 +1,5 @@
-!src/
-!doc/
-!LICENSE
-!README.en.md
-!README.md
+.idea/
+cmake-build-debug/
+.clang-format
+CMakeLists.txt
+
