@@ -161,7 +161,7 @@ int main()
     // printf("re_ex = %s\n", re_ex);
 
     printf("u16 = %x\n", ascii16_to_u16("1D4F\r\n"));
-
+    printf("r = %x",'\r');
 
     //re_mn = hj212_check_mn(pkt, e212_args.device_code);
     //re_pw = hj212_check_pw(pkt, e212_args.password);

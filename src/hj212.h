@@ -13,19 +13,24 @@
 
 // HJ212相关参数
 typedef struct{
-    unsigned char e212_enable;
-    unsigned char system_type; // ST
-    unsigned char function_code; //
-    unsigned char device_address; //
-    unsigned char monitor_time_sec;
-    unsigned char monitor_time_min;
-    unsigned char monitor_time_hour;
-    unsigned char monitor_time_day;
     unsigned char monitor_num; //监测因子个数
-    unsigned long monitor_time_all;
-    signed char password[8]; // PW
-    signed char device_code[25]; // MN
+    unsigned long monitor_time; //上传时间间隔，单位秒
+    signed char ST[4]; // ST
+    signed char PW[8]; // PW
+    signed char MN[24]; // MN
+    unsigned char hex_data[50]; // Modbus收集的hex数据
+    unsigned char ascii_data[255]; // 转化为ASCII形式的数据
+
 }E212_ARGS;
+
+// 监测因子参数
+typedef struct{
+    unsigned short hex_data;
+    signed char name[10];
+    signed char ascii_data[10];
+    
+}E212_FACTORS;
+
 
 // 请求命令返回表
 typedef enum{
