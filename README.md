@@ -11,6 +11,7 @@ C语言实现HJ212-2017协议
 - Doc:协议文档
 - Src:源码
 - example:参考例程
+- pyTest:模拟HJ212Client的脚本
 
 #### 参与贡献
 
