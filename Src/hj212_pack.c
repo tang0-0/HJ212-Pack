@@ -6,6 +6,7 @@
 #include <time.h>
 #include <sys/time.h>
 
+
 hj212p_obj *hj212p_create_object(void)
 {
     hj212p_obj *obj = malloc(sizeof(hj212p_obj));
@@ -128,8 +129,6 @@ int hj212p_add_instance(hj212p_obj *obj, const char *name, const char *value, in
 
 static int hj212p_get_qn(char *qn, unsigned int qn_size)
 {
-    if (NULL == qn || qn_size < 19) return -1;
-
     struct timeval time_ms = {0};
     struct tm *tm_t = NULL;
 
@@ -175,7 +174,7 @@ int hj212p_add_tail(hj212p_obj *obj)
     return hj212p_add_instance(obj, "&&", NULL, HJ212_SUFFIX_NONE, HJ212_DEL_NONE);
 }
 
-int hj212p_add_factor_rtd(hj212p_obj *obj, const char *name, const char *value, int has_flag, char flag)
+int hj212p_add_factor_rtd(hj212p_obj *obj, const char *name, const char *value, int has_flag, const char *flag)
 {
     if (NULL == obj) return -1;
 
@@ -184,7 +183,7 @@ int hj212p_add_factor_rtd(hj212p_obj *obj, const char *name, const char *value, 
     {
         ret = hj212p_add_instance(obj, name, value, HJ212_SUFFIX_RTD, HJ212_DEL_COMMA);
         if (ret < 0) return -2;
-        ret = hj212p_add_instance(obj, name, &flag, HJ212_SUFFIX_FLAG, HJ212_DEL_SEMICOLON);
+        ret = hj212p_add_instance(obj, name, flag, HJ212_SUFFIX_FLAG, HJ212_DEL_SEMICOLON);
         if (ret < 0) return -3;
     }
     else
